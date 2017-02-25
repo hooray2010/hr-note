@@ -1,4 +1,4 @@
-package cn.zawa.demo;
+package cn.zawa.demo.test;
 
 
 
@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * Created by hurui on 2017/2/13.
  */
-public class ConstructorDemo {
+public class ConstructorTest {
   
   public static void main(String[] args) {
     //testForEach();
