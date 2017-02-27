@@ -9,7 +9,7 @@ import java.util.List;
 public class ShapeTest {
   
   public static void main(String[] args) {
-    List<Shape> list = Arrays.asList(new Cirlce(), new Square());
+    List<Shape> list = Arrays.asList(new Circle(), new Square());
     for (Shape shape : list) {
       //调用子类的toString方法
       shape.draw();
@@ -19,6 +19,7 @@ public class ShapeTest {
 }
 
 abstract class Shape {
+  
   void draw() {
     System.out.println("shape draw" + this);
   }
@@ -29,7 +30,7 @@ abstract class Shape {
   }
 }
 
-class Cirlce extends Shape {
+class Circle extends Shape {
   void draw() {
     System.out.println("circle draw--" + this);
   }
