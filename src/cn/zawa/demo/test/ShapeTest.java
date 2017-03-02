@@ -13,6 +13,7 @@ public class ShapeTest {
     for (Shape shape : list) {
       //调用子类的toString方法
       shape.draw();
+      System.out.println();
     }
   }
   
