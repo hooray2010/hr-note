@@ -3,7 +3,7 @@ package cn.zawa.demo.pojo;
 /**
  * Created by hurui on 2017/2/13.
  */
-public class User {
+public class User extends People {
   
   private String name;
   private SexEnum sex;
