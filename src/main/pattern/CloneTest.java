@@ -1,3 +1,4 @@
+package main.pattern;
 
 import model.SimpleObject;
 import model.insurance.Insurer;
