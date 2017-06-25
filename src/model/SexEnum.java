@@ -1,4 +1,4 @@
-package cn.zawa.demo.pojo;
+package model;
 
 /**
  * Created by hurui on 2017/2/13.

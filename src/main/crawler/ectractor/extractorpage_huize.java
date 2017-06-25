@@ -1,6 +1,6 @@
-package cn.zawa.crawler.ectractor;
+package main.crawler.ectractor;
 
-import cn.zawa.crawler.utils.GetDoc;
+import main.crawler.utils.GetDoc;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -13,7 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class extractorpage_huize {
-  
+
   public static Map<String, String> getQuesAns(List<String> list) {
     Map<String, String> map = new HashMap<>();
     for (String str : list) {
@@ -34,7 +34,7 @@ public class extractorpage_huize {
     }
     return map;
   }
-  
+
   public static void main(String[] args) {
     List<String> list = new ArrayList<>();
     list.add("http://xuexi.huize.com/insurancefaq/detal-209322.html");

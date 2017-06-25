@@ -1,4 +1,4 @@
-package cn.zawa.demo.pojo;
+package model;
 
 import java.io.Serializable;
 

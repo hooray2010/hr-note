@@ -1,4 +1,4 @@
-package cn.zawa.crawler.utils;
+package main.crawler.utils;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;

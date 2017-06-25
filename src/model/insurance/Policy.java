@@ -1,4 +1,4 @@
-package cn.zawa.demo.pojo.insurance;
+package model.insurance;
 
 import java.io.Serializable;
 import java.util.Date;

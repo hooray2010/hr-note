@@ -1,7 +1,7 @@
-package cn.zawa.crawler.ectractor;
+package main.crawler.ectractor;
 
-import cn.zawa.crawler.utils.Connect;
-import cn.zawa.crawler.utils.GetDoc;
+import main.crawler.utils.Connect;
+import main.crawler.utils.GetDoc;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

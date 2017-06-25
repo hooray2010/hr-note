@@ -1,6 +1,7 @@
-package cn.zawa.demo.pojo.insurance;
+package model.insurance;
 
-import cn.zawa.demo.pojo.SexEnum;
+import model.SexEnum;
+import model.insurance.Policy;
 
 import java.io.Serializable;
 

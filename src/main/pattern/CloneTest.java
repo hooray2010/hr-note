@@ -1,8 +1,7 @@
-package cn.zawa.demo.test;
 
-import cn.zawa.demo.pojo.SimpleObject;
-import cn.zawa.demo.pojo.insurance.Insurer;
-import cn.zawa.demo.pojo.insurance.Policy;
+import model.SimpleObject;
+import model.insurance.Insurer;
+import model.insurance.Policy;
 
 import java.io.*;
 import java.util.Date;

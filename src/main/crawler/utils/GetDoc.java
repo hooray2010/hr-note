@@ -1,5 +1,6 @@
-package cn.zawa.crawler.utils;
+package main.crawler.utils;
 
+import main.crawler.utils.HttpClientUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 

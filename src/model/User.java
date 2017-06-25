@@ -1,6 +1,6 @@
-package cn.zawa.demo.pojo;
+package model;
 
-import cn.zawa.demo.pojo.insurance.Insurer;
+import model.insurance.Insurer;
 
 /**
  * Created by hurui on 2017/2/13.

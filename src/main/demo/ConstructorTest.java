@@ -1,8 +1,8 @@
-package cn.zawa.demo.test;
+package main.demo;
 
-
-import cn.zawa.demo.pojo.SexEnum;
-import cn.zawa.demo.pojo.User;
+import model.SexEnum;
+import model.User;
+import model.insurance.Insurer;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.Random;
  * Created by hurui on 2017/2/13.
  */
 public class ConstructorTest {
-  
+
   public static void main(String[] args) {
     //testForEach();
     //testConstructor();
@@ -22,24 +22,24 @@ public class ConstructorTest {
     //testEnum();
     testFields();
   }
-  
+
   private static void testFields() {
-    User user = new User();
+    Insurer insurer = new Insurer();
     List<Field> fieldList = new ArrayList<>();
-    
-    fieldList.addAll(Arrays.asList(user.getClass().getDeclaredFields()));
+
+    fieldList.addAll(Arrays.asList(insurer.getClass().getDeclaredFields()));
     System.out.println(fieldList);
-    
-    fieldList.addAll(Arrays.asList(user.getClass().getSuperclass().getDeclaredFields()));
+
+    fieldList.addAll(Arrays.asList(insurer.getClass().getSuperclass().getDeclaredFields()));
     System.out.println(fieldList);
   }
-  
+
   private static void testEnum() {
-    User user = new User();
-    user.setSex(SexEnum.MALE);
-    System.out.println(user.getSex());
+    Insurer user = new Insurer();
+    user.setSexEnum(SexEnum.MALE);
+    System.out.println(user.getSexEnum());
   }
-  
+
   private static void testVarArgs(Object... args) {
     //args = null;
     for (Object o : args) {
@@ -47,12 +47,12 @@ public class ConstructorTest {
     }
     System.out.println("BBB");
   }
-  
+
   private static void testConstructor() {
     User user = new User();
     System.out.println(user);
   }
-  
+
   private static void testForEach() {
     Random random = new Random(47);
     float[] f = new float[10];
@@ -63,5 +63,5 @@ public class ConstructorTest {
       System.out.println(x);
     }
   }
-  
+
 }

@@ -1,4 +1,4 @@
-package cn.zawa.crawler.utils;
+package main.crawler.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
