@@ -1,4 +1,4 @@
-package main.pattern;
+package main.demo;
 
 import model.SimpleObject;
 import model.insurance.Insurer;
