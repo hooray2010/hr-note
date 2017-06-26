@@ -5,10 +5,14 @@ package model.animal;
  */
 public abstract class Animal implements Action {
 
+  public Animal() {
+    System.out.println("Animal construct...");
+  }
+
   public abstract void eat();
 
   public void work() {
-    System.out.println("Do something");
+    System.out.println("Do something...");
   }
 
 }
