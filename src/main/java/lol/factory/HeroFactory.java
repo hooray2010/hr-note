@@ -1,4 +1,4 @@
-package main.java.lol;
+package main.java.lol.factory;
 
 import main.java.lol.hero.Hero;
 import main.java.lol.skill.SummonerSkill;
@@ -6,7 +6,7 @@ import main.java.lol.skill.SummonerSkill;
 /**
  * Created by hurui on 2017/6/27.
  */
-public class LolFactory {
+public class HeroFactory {
   
   private static final String classNameSuffix = "Hero";
   

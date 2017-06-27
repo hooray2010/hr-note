@@ -5,30 +5,30 @@ import main.java.lol.skill.SummonerSkill;
 /**
  * Created by hurui on 2017/6/27.
  */
-public class FizzHero extends Hero {
+public class JaxHero extends Hero {
   
-  public FizzHero(SummonerSkill d, SummonerSkill f) {
+  public JaxHero(SummonerSkill d, SummonerSkill f) {
     super(d, f);
   }
   
   @Override
   public void q() {
-    System.out.println("Fizz Q");
+    System.out.println("Jax Q");
   }
   
   @Override
   public void w() {
-    System.out.println("Fizz W");
+    System.out.println("Jax W");
   }
   
   @Override
   public void e() {
-    System.out.println("Fizz E");
+    System.out.println("Jax E");
   }
   
   @Override
   public void r() {
-    System.out.println("Fizz R");
+    System.out.println("Jax R");
   }
   
 }
