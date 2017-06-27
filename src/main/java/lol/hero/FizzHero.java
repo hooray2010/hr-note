@@ -31,14 +31,4 @@ public class FizzHero extends Hero {
     
   }
   
-  @Override
-  public void d() {
-    
-  }
-  
-  @Override
-  public void f() {
-    
-  }
-  
 }

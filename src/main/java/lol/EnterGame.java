@@ -1,6 +1,6 @@
 package main.java.lol;
 
-import main.java.lol.hero.FizzHero;
+import main.java.lol.hero.Hero;
 import main.java.lol.skill.FlashSS;
 import main.java.lol.skill.SummonerSkill;
 import main.java.lol.skill.TeleportSS;
@@ -17,10 +17,12 @@ public class EnterGame {
     SummonerSkill flash = new FlashSS();
     SummonerSkill teleport = new TeleportSS();
     
-    //Hero fizz = lolFactory.getHero("Fizz", flash, teleport);
-    FizzHero fizzHero = new FizzHero(flash, teleport);
-    
-    System.out.println("1231231");
+    //简单工厂模式 —— 创建英雄
+    //召唤师技能 —— 策略模式
+    Hero fizz = lolFactory.getHero("Fizz", flash, teleport);
+    //FizzHero fizzHero = new FizzHero(flash, teleport);
+    fizz.d();
+    fizz.f();
   }
   
 }
