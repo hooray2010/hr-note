@@ -1,7 +1,7 @@
-package main.java.crawler;
+package crawler;
 
-import main.java.crawler.ectractor.extractorlink_huize;
-import main.java.crawler.ectractor.extractorpage_huize;
+import crawler.ectractor.extractorlink_huize;
+import crawler.ectractor.extractorpage_huize;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;

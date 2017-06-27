@@ -1,6 +1,6 @@
-package main.java.crawler.ectractor;
+package crawler.ectractor;
 
-import main.java.crawler.utils.GetDoc;
+import crawler.utils.GetDoc;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;

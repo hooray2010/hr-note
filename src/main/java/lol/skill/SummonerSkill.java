@@ -1,10 +1,12 @@
-package main.java.lol.skill;
+package lol.skill;
 
 /**
  * Created by hurui on 2017/6/27.
  */
 public interface SummonerSkill {
-  
+
+  String ssName();
+
   void releaseSS();
-  
+
 }

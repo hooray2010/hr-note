@@ -1,4 +1,4 @@
-package main.java.pattern;
+package pattern;
 
 import model.insurance.Insurer;
 

@@ -1,4 +1,4 @@
-package main.java.crawler.utils;
+package crawler.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,11 +7,11 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class Connect {
-  
+
   public static String SendGET(String url) {
     String result = "";//访问返回结果
     BufferedReader read = null;//读取访问结果
-    
+
     try {
       //创建url
       URL realurl = new URL(url);
@@ -41,8 +41,8 @@ public class Connect {
         }
       }
     }
-    
+
     return result;
   }
-  
+
 }

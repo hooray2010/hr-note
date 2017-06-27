@@ -1,7 +1,7 @@
-package main.java.crawler.ectractor;
+package crawler.ectractor;
 
-import main.java.crawler.utils.Connect;
-import main.java.crawler.utils.GetDoc;
+import crawler.utils.Connect;
+import crawler.utils.GetDoc;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -11,15 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class extractorlink_huize {
-  
+
   private static final String BASE_URL = "http://xuexi.huize.com/insurancefaq/questionsmallclass-2-21-1-";
   private static final String PREFIX = "http://xuexi.huize.com";
   private static int pageCount;
-  
+
   static {
     pageCount = getPageCount();
   }
-  
+
   public static List<String> getAllUrl() {
     List<String> list = new ArrayList<>();
     //max page number
@@ -30,7 +30,7 @@ public class extractorlink_huize {
     }
     return list;
   }
-  
+
   private static List<String> getUrl(String targetUrl) {
     Document doc = GetDoc.getdoc(targetUrl, 3000, 0, 2);
     doc.select("span[class=qas-r2 mt20 pt20 bt-dd]").remove();
@@ -42,7 +42,7 @@ public class extractorlink_huize {
     }
     return list;
   }
-  
+
   public static int getPageCount() {
     Document doc = Jsoup.parse(Connect.SendGET(BASE_URL + "1.html"));
     System.out.println(doc.select("input#maxRowCount").attr("value"));

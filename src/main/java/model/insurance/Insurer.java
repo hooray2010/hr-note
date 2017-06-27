@@ -1,7 +1,7 @@
 package model.insurance;
 
+
 import model.SexEnum;
-import model.insurance.Policy;
 
 import java.io.Serializable;
 

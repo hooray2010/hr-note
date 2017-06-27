@@ -1,5 +1,6 @@
 package model;
 
+
 import model.insurance.Insurer;
 
 /**
