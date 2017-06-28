@@ -2,6 +2,8 @@ package lol;
 
 import lol.factory.HeroFactory;
 import lol.factory.SummonerSkillFactory;
+import lol.model.HeroName;
+import lol.model.SummonerSkillName;
 import lol.model.hero.Hero;
 import lol.model.skill.SummonerSkill;
 import lol.strategy.AttackStrategy;
@@ -45,10 +47,10 @@ public class EnterGame {
    */
   @Test
   public void selectHero() throws Exception {
-    SummonerSkill dSS = SummonerSkillFactory.getSkillSS("Flash");
-    SummonerSkill fSS = SummonerSkillFactory.getSkillSS("Teleport");
+    SummonerSkill dSS = SummonerSkillFactory.getSkillSS(SummonerSkillName.FLASH);
+    SummonerSkill fSS = SummonerSkillFactory.getSkillSS(SummonerSkillName.IGNITE);
     
-    Hero fizz = HeroFactory.getHero("Fizz", dSS, fSS);
+    Hero fizz = HeroFactory.getHero(HeroName.FIZZ, dSS, fSS);
     fizz.q();
     fizz.w();
     fizz.e();
@@ -58,7 +60,7 @@ public class EnterGame {
     
     System.out.println("——————————");
     
-    Hero jax = HeroFactory.getHero("Jax", dSS, fSS);
+    Hero jax = HeroFactory.getHero(HeroName.JAX, dSS, fSS);
     jax.q();
     jax.w();
     jax.e();
