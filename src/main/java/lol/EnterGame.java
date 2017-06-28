@@ -2,8 +2,8 @@ package lol;
 
 import lol.factory.HeroFactory;
 import lol.factory.SummonerSkillFactory;
-import lol.hero.Hero;
-import lol.skill.SummonerSkill;
+import lol.model.hero.Hero;
+import lol.model.skill.SummonerSkill;
 import lol.strategy.AttackStrategy;
 import lol.strategy.StrategyExecutor;
 import org.junit.Test;
@@ -12,15 +12,12 @@ import org.junit.Test;
  * Created by hurui on 2017/6/27.
  */
 public class EnterGame {
-
-  private static final HeroFactory heroFactory = new HeroFactory();
-  private static final SummonerSkillFactory ssFactory = new SummonerSkillFactory();
-
+  
   public static void main(String[] args) throws Exception {
     //selectHero();
     //selectLineup();
   }
-
+  
   /**
    * 选择阵容 —— 策略模式
    *
@@ -35,11 +32,11 @@ public class EnterGame {
 //
 //    Strategy defendStrategy = new DefendStrategy();
 //    defendStrategy.chooseHeroes();
-
+    
     StrategyExecutor strategyExecutor = new StrategyExecutor(new AttackStrategy());
     strategyExecutor.executeStrategy();
   }
-
+  
   /**
    * 选择英雄 —— 工厂模式
    * 召唤师技能 —— 策略模式
@@ -48,20 +45,20 @@ public class EnterGame {
    */
   @Test
   public void selectHero() throws Exception {
-    SummonerSkill dSS = ssFactory.getSkillSS("Flash");
-    SummonerSkill fSS = ssFactory.getSkillSS("Teleport");
-
-    Hero fizz = heroFactory.getHero("Fizz", dSS, fSS);
+    SummonerSkill dSS = SummonerSkillFactory.getSkillSS("Flash");
+    SummonerSkill fSS = SummonerSkillFactory.getSkillSS("Teleport");
+    
+    Hero fizz = HeroFactory.getHero("Fizz", dSS, fSS);
     fizz.q();
     fizz.w();
     fizz.e();
     fizz.r();
     fizz.d();
     fizz.f();
-
+    
     System.out.println("——————————");
-
-    Hero jax = heroFactory.getHero("Jax", dSS, fSS);
+    
+    Hero jax = HeroFactory.getHero("Jax", dSS, fSS);
     jax.q();
     jax.w();
     jax.e();
@@ -69,5 +66,5 @@ public class EnterGame {
     jax.d();
     jax.f();
   }
-
+  
 }
