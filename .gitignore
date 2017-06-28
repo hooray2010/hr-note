@@ -1,0 +1,9 @@
+/.idea/
+*.iml
+target/
+.classpath
+.settings/
+.project
+dump.rdb
+
+/bin/
