@@ -1,4 +1,4 @@
-package main.java.demo;
+package demo;
 
 import java.util.Arrays;
 import java.util.List;
