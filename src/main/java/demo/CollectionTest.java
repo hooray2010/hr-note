@@ -1,6 +1,7 @@
 package demo;
 
 import lol.model.skill.FlashSS;
+import model.Driver;
 import model.SexEnum;
 import model.User;
 import model.UserComparator;
@@ -14,8 +15,8 @@ import java.util.*;
 public class CollectionTest {
   
   public static void main(String[] args) throws Exception {
-    List<? extends User> userList = new ArrayList<>();
-    //userList.add(new Driver());
+    List<? super User> userList = new ArrayList<>();
+    userList.add(new Driver());
   }
   
   /**
@@ -23,9 +24,11 @@ public class CollectionTest {
    * HashSet可以存入null，无序用的哈希值
    * <p>
    * <? extends T>
-   * T的子类，接受对象的时候
+   * T的子类，放入父类
+   * 接受对象的时候
    * <? super T>
-   * T的父类，调用方法的时候，子父类都实现类Comparable接口，方法重写；
+   * T的父类，放入子类
+   * 调用方法的时候，子父类都实现类Comparable接口，方法重写；
    * <p>
    * TreeMap容器内的对象必须实现Comparable接口
    * 传入比较器，新的比较策略
