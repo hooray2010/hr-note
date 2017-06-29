@@ -15,6 +15,7 @@ import java.util.*;
 public class CollectionTest {
 
   public static void main(String[] args) throws Exception {
+    //集合泛型只可以限定上边界？
     List<? extends Driver> driverList = new ArrayList<>();
     //userList.add(new Driver());
 
@@ -24,6 +25,12 @@ public class CollectionTest {
 
     List<? super User> userList = new ArrayList<>();
     userList.add(new Driver());
+    userList.add(new User());
+    //子类向上转型，调用父类任何方法也不会报错
+    //但是限定子类边界，调用子类的方法，（假如编译可以通过）其实父类没有！则会报错
+    User driver = new Driver();
+    userList.add(driver);
+    System.out.println(userList);
   }
 
   /**
