@@ -23,6 +23,7 @@ public class CollectionTest {
    * 强制向下转型
    * 子类继承父类所有
    */
+  @Test
   public void testGeneric() {
     //集合泛型只可以限定上边界？
     List<? extends Driver> driverList = new ArrayList<>();
@@ -45,6 +46,29 @@ public class CollectionTest {
     User driverUser = (User) userList.get(0);
     System.out.println(driverUser.getName());
     System.out.println(driverUser.getSalary());
+  }
+  
+  /**
+   * TreeMap的key排序同TreeSet
+   * TreeSet底层由TreeMap实现
+   */
+  @Test
+  public void testTreeMap() {
+    Map<Driver, String> driverMap = new TreeMap<>(new UserComparator());
+    
+    Driver taxiDriver = new Driver();
+    taxiDriver.setCar("大众");
+    taxiDriver.setAge(20);
+    taxiDriver.setSalary(20000);
+    driverMap.put(taxiDriver, "出租车司机");
+    
+    Driver busDriver = new Driver();
+    busDriver.setCar("青年汽车");
+    busDriver.setAge(40);
+    busDriver.setSalary(10000);
+    driverMap.put(busDriver, "大巴车司机");
+    
+    System.out.println(driverMap);
   }
   
   /**

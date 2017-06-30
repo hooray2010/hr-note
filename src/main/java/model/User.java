@@ -11,9 +11,9 @@ public class User implements Comparable<User> {
   private int age;
   private int salary;
   
-  {
-    this.name = "老王";
-  }
+//  {
+//    this.name = "老王";
+//  }
   
   public User() {
     //this.setName("小王");
