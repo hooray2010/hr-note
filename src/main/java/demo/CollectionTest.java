@@ -13,16 +13,25 @@ import java.util.*;
  * Created by hurui on 2017/6/29.
  */
 public class CollectionTest {
-
+  
   public static void main(String[] args) throws Exception {
+    
+  }
+  
+  /**
+   * 自动向上转型
+   * 强制向下转型
+   * 子类继承父类所有
+   */
+  public void testGeneric() {
     //集合泛型只可以限定上边界？
     List<? extends Driver> driverList = new ArrayList<>();
     //userList.add(new Driver());
-
+    
     List<? super Driver> driverList2 = new ArrayList<>();
     driverList2.add(new Driver());
     //driverList2.add(new User());
-
+    
     List<? super User> userList = new ArrayList<>();
     userList.add(new Driver());
     userList.add(new User());
@@ -31,13 +40,13 @@ public class CollectionTest {
     User driver = new Driver();
     userList.add(driver);
     System.out.println(userList);
-
+    
     //调用的仍然为子类自己的方法（子类可以继承父类的所有方法），所有并不会报错
     User driverUser = (User) userList.get(0);
     System.out.println(driverUser.getName());
     System.out.println(driverUser.getSalary());
   }
-
+  
   /**
    * TreeSet不能存入null，比较排序需要compare
    * HashSet可以存入null，无序用的哈希值
@@ -49,8 +58,11 @@ public class CollectionTest {
    * 上边界为T，放入的子类
    * 调用方法的时候，子父类都实现类Comparable接口，方法重写；
    * <p>
-   * TreeMap容器内的对象必须实现Comparable接口
-   * 传入比较器，新的比较策略
+   * 1、TreeMap容器内的对象必须实现Comparable接口
+   * Comparable<? super K> k = (Comparable<? super K>) key，TreeMap中565行
+   * 继承体系：Driver > User > Comparable，重写的方法为compareTo
+   * Driver自动向上转型为Comparable，调用compareTo方法，实际为Driver自身的方法
+   * 2、传入比较器，新的比较策略
    */
   @Test
   public void testTreeSet() {
@@ -61,30 +73,39 @@ public class CollectionTest {
     stringSet.add("B");
     stringSet.add("a");
     System.out.println(stringSet);
-
+    
     Set<String> stringOrderSet = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
     stringOrderSet.add("C");
     stringOrderSet.add("B");
     stringOrderSet.add("a");
     System.out.println(stringOrderSet);
-
+    
     //TreeMap容器内的对象必须实现Comparable接口
     User user1 = new User("老王", SexEnum.MALE, 40, 10000);
     User user2 = new User("小李", SexEnum.FEMALE, 20, 20000);
-
+    
     Set<User> userSet = new TreeSet<>();
     userSet.add(user1);
     userSet.add(user2);
     System.out.println(userSet);
-
+    
     //传入比较器，新的比较策略
     Set<User> userOrderSet = new TreeSet<>(new UserComparator());
 //    userOrderSet.add(user1);
 //    userOrderSet.add(user2);
     userOrderSet.addAll(userSet);
     System.out.println(userOrderSet);
+    
+    Driver driver1 = new Driver();
+    driver1.setAge(40);
+    Driver driver2 = new Driver();
+    driver2.setAge(20);
+    Set<Driver> driverSet = new TreeSet<>();
+    driverSet.add(driver1);
+    driverSet.add(driver2);
+    System.out.println(driverSet);
   }
-
+  
   /**
    * 比较器：策略模式
    */
@@ -119,7 +140,7 @@ public class CollectionTest {
     });
     System.out.println(stringList);
   }
-
+  
   /**
    * 测试hashcode
    */
@@ -133,5 +154,5 @@ public class CollectionTest {
     System.out.println("flash".hashCode());
     System.out.println(new FlashSS().hashCode());
   }
-
+  
 }
