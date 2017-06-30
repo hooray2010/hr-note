@@ -190,6 +190,17 @@ public class CollectionTest {
     System.out.println(Integer.toHexString(people2.hashCode()));
     System.out.println(people2.toString());
     System.out.println(people2);
+    
+    System.out.println("------------------");
+    //比较地址
+    System.out.println(people == people2);
+    //比较哈希值
+    System.out.println(people.equals(people2));
+    Set<People> peopleSet = new HashSet<>();
+    peopleSet.add(people);
+    peopleSet.add(people2);
+    //重写equals方法
+    System.out.println(peopleSet.size());
   }
   
   /**

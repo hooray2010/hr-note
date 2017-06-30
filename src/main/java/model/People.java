@@ -8,6 +8,16 @@ public class People {
   private int age;
   private SexEnum sexEnum;
   
+  @Override
+  public int hashCode() {
+    return 1;
+  }
+  
+  @Override
+  public boolean equals(Object obj) {
+    return this.hashCode() == obj.hashCode();
+  }
+  
   public SexEnum getSexEnum() {
     return sexEnum;
   }
