@@ -1,10 +1,7 @@
 package demo;
 
 import lol.model.skill.FlashSS;
-import model.Driver;
-import model.SexEnum;
-import model.User;
-import model.UserComparator;
+import model.*;
 import org.junit.Test;
 
 import java.util.*;
@@ -163,6 +160,36 @@ public class CollectionTest {
       return n2 - n1;
     });
     System.out.println(stringList);
+  }
+  
+  /**
+   * 字符的哈希值为ASCII值
+   * 对象的地址值为：哈希值转16进制
+   */
+  @Test
+  public void testHashCode2() {
+    String s = "1";
+    System.out.println("1的哈希值：" + s.hashCode());
+    System.out.println("16进制为：" + Integer.toHexString(s.hashCode()));
+    System.out.println(1 + '1');
+    
+    User user = new User();
+    System.out.println("User的哈希值为：" + user.hashCode());
+    System.out.println("16进制为：" + Integer.toHexString(user.hashCode()));
+    
+    System.out.println("People：");
+    People people = new People();
+    people.setAge(1);
+    people.setSexEnum(SexEnum.MALE);
+    System.out.println(people);
+    
+    System.out.println("People2：");
+    People people2 = new People();
+    people2.setAge(2);
+    System.out.println(people2.hashCode());
+    System.out.println(Integer.toHexString(people2.hashCode()));
+    System.out.println(people2.toString());
+    System.out.println(people2);
   }
   
   /**
