@@ -22,6 +22,10 @@ public class CollectionTest {
    */
   @Test
   public void testGeneric() {
+    
+    List<? super Throwable> list = new ArrayList<>();
+    list.add(new NullPointerException("空指针异常！"));
+    
     //集合泛型只可以限定上边界？
     List<? extends Driver> driverList = new ArrayList<>();
     //userList.add(new Driver());
