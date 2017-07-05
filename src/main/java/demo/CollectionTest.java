@@ -19,6 +19,9 @@ public class CollectionTest {
    * 自动向上转型
    * 强制向下转型
    * 子类继承父类所有
+   * <p>
+   * <? extends E> defines E as the upper bound: "This can be cast to E".
+   * <? super E> defines E as the lower bound: "E can be cast to this."
    */
   @Test
   public void testGeneric() {
