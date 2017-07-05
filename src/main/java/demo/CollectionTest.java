@@ -28,6 +28,7 @@ public class CollectionTest {
     
     List<? super Throwable> list = new ArrayList<>();
     list.add(new NullPointerException("空指针异常！"));
+    list.get(0);
     
     //集合泛型只可以限定上边界？
     List<? extends Driver> driverList = new ArrayList<>();
