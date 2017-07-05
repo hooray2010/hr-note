@@ -43,7 +43,7 @@ public class CollectionTest {
     userList.add(driver);
     System.out.println(userList);
     
-    //调用的仍然为子类自己的方法（子类可以继承父类的所有方法），所有并不会报错
+    //调用的仍然为子类自己的方法（子类可以继承父类的所有方法），所以并不会报错
     User driverUser = (User) userList.get(0);
     System.out.println(driverUser.getName());
     System.out.println(driverUser.getSalary());
