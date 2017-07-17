@@ -3,6 +3,7 @@ package main.java.demo;
 import model.SimpleObject;
 import model.insurance.Insurer;
 import model.insurance.Policy;
+import org.junit.Test;
 
 import java.io.*;
 import java.util.Date;
@@ -10,7 +11,7 @@ import java.util.Date;
 /**
  * Created by hurui on 2017/6/25.
  */
-public class CloneTest {
+public class CloneTest implements Cloneable {
 
   public static void main(String[] args) throws IOException, ClassNotFoundException, CloneNotSupportedException {
 
@@ -18,6 +19,22 @@ public class CloneTest {
     //testShadowClone();;
     testDeepClone();
 
+  }
+
+  @Test
+  public void testClone() throws CloneNotSupportedException {
+    Object clone = super.clone();
+    Object clone2 = this.clone();
+
+    System.out.println(clone);
+    System.out.println(clone2);
+
+    System.out.println("end。。。");
+  }
+
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    return super.clone();
   }
 
   /**
