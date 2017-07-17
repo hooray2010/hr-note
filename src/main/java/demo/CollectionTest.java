@@ -19,9 +19,17 @@ public class CollectionTest {
    * 自动向上转型
    * 强制向下转型
    * 子类继承父类所有
+   * <p>
+   * <? extends E> defines E as the upper bound: "This can be cast to E".
+   * <? super E> defines E as the lower bound: "E can be cast to this."
    */
   @Test
   public void testGeneric() {
+    
+    List<? super Throwable> list = new ArrayList<>();
+    list.add(new NullPointerException("空指针异常！"));
+    list.get(0);
+    
     //集合泛型只可以限定上边界？
     List<? extends Driver> driverList = new ArrayList<>();
     //userList.add(new Driver());
@@ -39,7 +47,7 @@ public class CollectionTest {
     userList.add(driver);
     System.out.println(userList);
     
-    //调用的仍然为子类自己的方法（子类可以继承父类的所有方法），所有并不会报错
+    //调用的仍然为子类自己的方法（子类可以继承父类的所有方法），所以并不会报错
     User driverUser = (User) userList.get(0);
     System.out.println(driverUser.getName());
     System.out.println(driverUser.getSalary());
