@@ -6,7 +6,26 @@ import org.junit.Test;
 /**
  * Created by hurui on 2017/7/18.
  */
-public class Interval2DTest {
+public class DrawTest {
+
+  @Test
+  public void testFunction() {
+    int n = 100;
+    StdDraw.setXscale(-n, n);
+    StdDraw.setYscale(-n * n, n * n);
+    StdDraw.setPenRadius(.01);
+    for (int i = 1; i <= n; i++) {
+      StdDraw.point(i, i);
+      StdDraw.point(i, i * i);
+      StdDraw.point(i, i * Math.log(i));
+
+      StdDraw.point(-i, i);
+      StdDraw.point(-i, i * i);
+      StdDraw.point(-i, i * Math.log(i));
+    }
+
+    pause();
+  }
 
   /**
    * 测试二维间隔的API
