@@ -11,7 +11,9 @@ public class SignTest implements Cloneable {
 
   @Test
   public void testSign() throws CloneNotSupportedException {
-    int count = -128;
+    //int count = -128;
+    //int count = 'a';
+    char count = 'a';
     int size = 8;
     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(size);
     byteArrayOutputStream.write(count);
