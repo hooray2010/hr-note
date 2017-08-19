@@ -1,4 +1,4 @@
-package main.java.demo;
+package demo;
 
 import java.util.function.Consumer;
 import java.util.function.DoubleSupplier;
