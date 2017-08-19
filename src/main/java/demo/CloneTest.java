@@ -1,4 +1,4 @@
-package main.java.demo;
+package demo;
 
 import model.SimpleObject;
 import model.insurance.Insurer;

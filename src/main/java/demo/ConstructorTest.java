@@ -1,4 +1,4 @@
-package main.java.demo;
+package demo;
 
 import model.SexEnum;
 import model.User;

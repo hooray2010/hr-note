@@ -1,4 +1,4 @@
-package main.java.demo;
+package demo;
 
 import model.animal.Action;
 import model.animal.Animal;
