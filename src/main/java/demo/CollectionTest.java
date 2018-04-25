@@ -1,6 +1,6 @@
 package demo;
 
-import lol.model.skill.FlashSS;
+import pattern.lol.model.skill.FlashSS;
 import model.*;
 import org.junit.Test;
 
