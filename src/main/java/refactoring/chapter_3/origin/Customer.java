@@ -1,4 +1,4 @@
-package refactoring.demo1;
+package refactoring.chapter_3.origin;
 
 import java.util.ArrayList;
 import java.util.List;

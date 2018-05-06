@@ -1,4 +1,4 @@
-package refactoring.demo1;
+package refactoring.chapter_3.origin;
 
 /**
  * Created by hurui on 2018/4/25.
