@@ -41,7 +41,7 @@ public class ReplaceConditionalWithPolymorphism {
   }
 
   /**
-   * SubClasses or tate/Strategy
+   * SubClasses or State/Strategy
    *
    * @return
    */
