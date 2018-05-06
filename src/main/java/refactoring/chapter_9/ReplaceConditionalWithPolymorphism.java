@@ -7,7 +7,7 @@ package refactoring.chapter_9;
  */
 public class ReplaceConditionalWithPolymorphism {
 
-  private class EmployeeType {
+  private abstract class EmployeeType {
     private static final String ENGINEER = "engineer";
     private static final String SALESMAN = "salesman";
     private static final String MANAGER = "manager";
@@ -17,6 +17,9 @@ public class ReplaceConditionalWithPolymorphism {
     private String getTypeCode() {
       return typeCode;
     }
+
+    //for op
+    abstract int payAmount(ReplaceConditionalWithPolymorphism employee);
   }
 
   private int monthlySalary;
@@ -24,7 +27,7 @@ public class ReplaceConditionalWithPolymorphism {
   private int commission;
   private EmployeeType type;
 
-  int payAmount() {
+  int payAmount_or() {
     switch (getType()) {
       case EmployeeType.ENGINEER:
         return monthlySalary;
@@ -37,8 +40,49 @@ public class ReplaceConditionalWithPolymorphism {
     }
   }
 
+  /**
+   * SubClasses or tate/Strategy
+   *
+   * @return
+   */
+  int payAmount_op() {
+    return type.payAmount(this);
+  }
+
   String getType() {
     return type.getTypeCode();
   }
 
+  private class Engineer extends EmployeeType {
+    @Override
+    int payAmount(ReplaceConditionalWithPolymorphism employee) {
+      return employee.getMonthlySalary();
+    }
+  }
+
+  private class SalesMan extends EmployeeType {
+    @Override
+    int payAmount(ReplaceConditionalWithPolymorphism employee) {
+      return employee.getMonthlySalary() + employee.getCommission();
+    }
+  }
+
+  private class Manager extends EmployeeType {
+    @Override
+    int payAmount(ReplaceConditionalWithPolymorphism employee) {
+      return employee.getMonthlySalary() + employee.getBonus();
+    }
+  }
+
+  public int getMonthlySalary() {
+    return monthlySalary;
+  }
+
+  public int getBonus() {
+    return bonus;
+  }
+
+  public int getCommission() {
+    return commission;
+  }
 }
