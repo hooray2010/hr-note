@@ -25,7 +25,7 @@ public class Customer {
 
   public String statement() {
 
-    StringBuilder result = new StringBuilder("Rental Record for").append(getName()).append("\n");
+    StringBuilder result = new StringBuilder("Rental Record for ").append(getName()).append("\n");
 
     // amounts for each line
     for (Rental each : rentals) {
@@ -57,4 +57,17 @@ public class Customer {
     return result;
   }
 
+  public static void main(String[] args) {
+    Movie movie1 = new Movie("禁闭岛", Movie.REGULAR);
+    Rental rental1 = new Rental(movie1, 2);
+
+    Movie movie2 = new Movie("盗梦空间", Movie.NEW_RELEASE);
+    Rental rental2 = new Rental(movie2, 3);
+
+    Customer customer = new Customer("hurui");
+    customer.addRental(rental1);
+    customer.addRental(rental2);
+
+    System.out.println(customer.statement());
+  }
 }
