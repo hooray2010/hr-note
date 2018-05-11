@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.channels.SelectableChannel;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
+import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -15,7 +16,7 @@ public class SelectorTest {
   public static void main(String[] args) throws IOException {
     Selector selector = Selector.open();
 
-    SelectableChannel channel = null;
+    SelectableChannel channel = SocketChannel.open();
 
     SelectionKey selectionKey = channel.register(selector, SelectionKey.OP_ACCEPT);
 
