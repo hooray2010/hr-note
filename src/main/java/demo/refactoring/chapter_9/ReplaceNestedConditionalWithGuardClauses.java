@@ -1,7 +1,7 @@
 package demo.refactoring.chapter_9;
 
 /**
- * 简化条件表达式：以卫语句取代嵌套条件表达式
+ * 简化条件表达式：以谓语句取代嵌套条件表达式
  * <p>
  * Created by hurui on 2018/5/6.
  */
@@ -32,7 +32,7 @@ public class ReplaceNestedConditionalWithGuardClauses {
   }
 
   /**
-   * 卫语的精髓：给某一条分支以特别的重视，这种情况比较罕见，如果发生，则提前退出；
+   * 谓语的精髓：给某一条分支以特别的重视，这种情况比较罕见，如果发生，则提前退出；
    * 而 if-then-else 结构，表明对各分支的重视是同等的。
    * <p>
    * 「单一出口」规则，其实不那么有用，保持代码清晰才是最关键的。

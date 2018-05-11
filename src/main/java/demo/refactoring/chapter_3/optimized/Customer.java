@@ -57,6 +57,10 @@ public class Customer {
     return result;
   }
 
+
+
+
+  /* main */
   public static void main(String[] args) {
     Movie movie1 = new Movie("禁闭岛", Movie.REGULAR);
     Rental rental1 = new Rental(movie1, 2);
@@ -70,4 +74,5 @@ public class Customer {
 
     System.out.println(customer.statement());
   }
+
 }
