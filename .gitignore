@@ -32,5 +32,6 @@ target/
 dump.rdb
 
 data/
+lib/
 
 /bin/
