@@ -1,7 +1,7 @@
-package model.insurance;
+package com.hr.note.model.insurance;
 
 
-import model.SexEnum;
+import com.hr.note.model.SexEnum;
 
 import java.io.Serializable;
 

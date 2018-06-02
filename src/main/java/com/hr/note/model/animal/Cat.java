@@ -1,4 +1,4 @@
-package model.animal;
+package com.hr.note.model.animal;
 
 /**
  * Created by hurui on 2017/6/26.

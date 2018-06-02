@@ -1,8 +1,8 @@
 package com.hr.note.tij;
 
-import model.SimpleObject;
-import model.insurance.Insurer;
-import model.insurance.Policy;
+import com.hr.note.model.SimpleObject;
+import com.hr.note.model.insurance.Insurer;
+import com.hr.note.model.insurance.Policy;
 import org.junit.Test;
 
 import java.io.*;

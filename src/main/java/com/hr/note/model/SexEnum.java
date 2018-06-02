@@ -1,4 +1,4 @@
-package model;
+package com.hr.note.model;
 
 /**
  * Created by hurui on 2017/2/13.

@@ -1,4 +1,4 @@
-package model.insurance;
+package com.hr.note.model.insurance;
 
 import java.io.Serializable;
 import java.util.Date;

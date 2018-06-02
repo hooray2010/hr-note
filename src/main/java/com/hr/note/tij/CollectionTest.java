@@ -1,7 +1,7 @@
 package com.hr.note.tij;
 
 import com.hr.note.pattern.lol.model.skill.FlashSS;
-import model.*;
+import com.hr.note.model.*;
 import org.junit.Test;
 
 import java.util.*;

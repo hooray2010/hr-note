@@ -1,9 +1,9 @@
 package com.hr.note.tij;
 
-import model.animal.Action;
-import model.animal.Animal;
-import model.animal.Cat;
-import model.animal.Dag;
+import com.hr.note.model.animal.Action;
+import com.hr.note.model.animal.Animal;
+import com.hr.note.model.animal.Cat;
+import com.hr.note.model.animal.Dag;
 
 /**
  * Created by hurui on 2017/6/26.

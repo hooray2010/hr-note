@@ -1,6 +1,6 @@
 package com.hr.note.pattern;
 
-import model.insurance.Insurer;
+import com.hr.note.model.insurance.Insurer;
 
 import java.util.ArrayList;
 import java.util.List;

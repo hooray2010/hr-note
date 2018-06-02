@@ -1,8 +1,8 @@
 package com.hr.note.tij;
 
-import model.SexEnum;
-import model.User;
-import model.insurance.Insurer;
+import com.hr.note.model.SexEnum;
+import com.hr.note.model.User;
+import com.hr.note.model.insurance.Insurer;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
