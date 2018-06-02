@@ -1,4 +1,4 @@
-package demo.algs.leetcode;
+package demo.leetcode;
 
 /**
  * Created by hurui on 2018/5/17.
