@@ -31,7 +31,4 @@ target/
 .project
 dump.rdb
 
-data/
-lib/
-
 /bin/
