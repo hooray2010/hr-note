@@ -2,7 +2,6 @@ package com.hr.note.pattern.lol.factory;
 
 import com.hr.note.pattern.lol.model.skill.*;
 import com.hr.note.pattern.lol.model.SummonerSkillName;
-import demo.pattern.lol.model.skill.*;
 
 /**
  * Created by hurui on 2017/6/27.
